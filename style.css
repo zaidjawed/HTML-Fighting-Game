@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
 }
 
 .wrapper {
@@ -18,14 +19,16 @@
 }
 
 .timer {
-    background-color: red;
+    background-color: black;
     width: 100px;
-    height: 100px;
+    height: 50px;
     flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    border: 4px solid white;
 }
 
 .health-wrapper {
@@ -40,23 +43,31 @@
 }
 
 .health-bar {
-    background-color: yellow;
+    background-color: red;
     height: 30px;
     width: 100%;
 }
 
 .health {
     position: absolute;
-    background-color: blue;
+    background-color: #818cf8;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    border: 4px solid white;
+    transition: width 0.2s;
 }
+
 
 .health-wrapper:first-child .health {
     width: 100%;
     left: unset;
+    border-right: none;
+}
+
+.health-wrapper:last-child .health {
+    border-left: none;
 }
 
 .result {
